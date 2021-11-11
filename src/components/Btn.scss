@@ -1,0 +1,83 @@
+.btn{
+  display: inline-flex;
+  color: white;
+  background-color:transparent;
+  padding:1px;
+  border-style: solid;
+  border-width: 0;
+  border-color: transparent;
+  text-decoration: none;
+  outline: none;
+  border-radius: 4px;
+  box-shadow: none;
+  box-sizing: border-box;
+  cursor: pointer;
+  transition:all 0.25s ease-out;
+  font-family: 'Arial', sans-serif;
+  font-size: 16px;
+  line-height: 1;
+  font-weight: bold;
+	> div{
+		padding: 0 23px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+    min-height: 42px;
+    &.capitalize{
+      text-transform:uppercase;
+    }
+	}
+  ~ .btn{
+    margin-left: 16px;
+  }
+
+  &.btn{
+    &-green{
+      background: green;
+			color: white;
+      &:hover{
+        background:lighten( green, 3% );
+				color: white;
+        box-shadow: 0 2px 8px rgba(0,0,0,.2);
+			}
+      &:active{
+        background:darken( green, 3% );
+				color: white;
+        box-shadow: 0 2px 8px rgba(0,0,0,.2) inset;
+      }
+    }
+
+    &-red{
+      background: red;
+			color: white;
+      &:hover{
+        background:lighten( red, 3% );
+				color: white;
+        box-shadow: 0 2px 8px rgba(0,0,0,.2);
+			}
+      &:active{
+        background:darken( red, 3% );
+				color: white;
+        box-shadow: 0 2px 8px rgba(0,0,0,.2) inset;
+      }
+    }
+    &-secondary-red{
+      background: red;
+      color: red;
+      > div{
+        background: white;
+        border-radius: 3px;
+      }
+      &:hover{
+        background:lighten( red, 3% );
+				color: red;
+        box-shadow: 0 2px 8px rgba(0,0,0,.2);
+			}
+      &:active{
+        background:darken( red, 3% );
+				color: red;
+        box-shadow: 0 2px 8px rgba(0,0,0,.2) inset;
+      }
+    }
+  }
+}
